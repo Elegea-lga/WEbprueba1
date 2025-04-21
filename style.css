@@ -1,0 +1,42 @@
+
+/* ================================
+   Estilos base y tipografía
+   ================================ */
+body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-elegea-light-bg text-elegea-dark-text transition-colors duration-300;
+}
+
+/* Habilita desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   Lista de ítems en paquetes
+   ================================ */
+.package-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    text-align: left;
+}
+
+.package-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #3b82f6; /* Azul ELEGEA */
+    font-weight: bold;
+}
+
+/* ================================
+   Estilo para el botón de tema
+   ================================ */
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+    transform: translateX(100%);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #4f46e5; /* Indigo */
+}
